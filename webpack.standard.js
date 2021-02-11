@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires, import/no-extraneous-dependencies */
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const common = require('./webpack.common.js');
 const helper = require('./webpack.helper.js');
