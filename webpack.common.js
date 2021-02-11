@@ -2,6 +2,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const postcssPresetEnv = require('postcss-preset-env');
+const cssnano = require('cssnano');
 
 const { version: pkgVersion } = require('./package.json');
 /* eslint-enable @typescript-eslint/no-var-requires, import/no-extraneous-dependencies */
@@ -35,6 +36,9 @@ const config = {
             options: {
               plugins: () => [
                 postcssPresetEnv(),
+                cssnano({
+                  preset: 'default',
+                }),
               ],
             },
           },
